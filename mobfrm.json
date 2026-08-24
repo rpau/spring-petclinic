@@ -1,0 +1,92 @@
+{
+  "slug" : "frm",
+  "coordinates" : [ "com.edwardjones.framework:frm-adapters-common", "com.edwardjones.framework:frm-concurrent", "com.edwardjones.framework:frm-ctg", "com.edwardjones.framework:frm-error-pages", "com.edwardjones.framework:frm-framework-dependencies", "com.edwardjones.framework:frm-logback", "com.edwardjones.framework:frm-pilot", "com.edwardjones.framework:frm-security-common", "com.edwardjones.framework:frm-slf4j", "com.edwardjones.framework:frm-spring-boot-starter-ctg", "com.edwardjones.framework:frm-spring-boot-starter-rest-server", "com.edwardjones.framework:frm-spring-boot-starter-security", "com.edwardjones.framework:frm-spring-boot-starter-web", "com.edwardjones.framework:frm-spring-mvc", "com.edwardjones.framework:frm-spring-rest-client", "com.edwardjones.framework:frm-spring-rest-server", "com.edwardjones.framework:frm-spring-security", "com.edwardjones.framework:frm-spring-web", "com.edwardjones.framework:frm-stats", "com.edwardjones.framework:frm-unleash", "com.edwardjones.framework:frm-usermgmt", "com.edwardjones.framework:frm-web", "com.edwardjones.framework:frm-web-supplemental" ],
+  "repositoryUrl" : "",
+  "rewrite" : {
+    "1.0.x" : {
+      "recipes" : [ ],
+      "nextRewrite" : {
+        "version" : "4.2.x",
+        "project" : null
+      },
+      "requirements" : {
+        "supportedGenerations" : { },
+        "excludedArtifacts" : [ ]
+      }
+    },
+    "4.2.x" : {
+      "recipes" : [ ],
+      "nextRewrite" : {
+        "version" : "4.3.x",
+        "project" : null
+      },
+      "requirements" : {
+        "supportedGenerations" : { },
+        "excludedArtifacts" : [ ]
+      }
+    },
+    "4.3.x" : {
+      "recipes" : [ ],
+      "nextRewrite" : {
+        "version" : "4.4.x",
+        "project" : null
+      },
+      "requirements" : {
+        "supportedGenerations" : { },
+        "excludedArtifacts" : [ ]
+      }
+    },
+    "4.4.x" : {
+      "recipes" : [ ],
+      "nextRewrite" : {
+        "version" : "4.6.x",
+        "project" : null
+      },
+      "requirements" : {
+        "supportedGenerations" : { },
+        "excludedArtifacts" : [ ]
+      }
+    },
+    "4.6.x" : {
+      "recipes" : [ ],
+      "nextRewrite" : {
+        "version" : "4.7.x",
+        "project" : null
+      },
+      "requirements" : {
+        "supportedGenerations" : { },
+        "excludedArtifacts" : [ ]
+      }
+    },
+    "4.7.x" : {
+      "recipes" : [ ],
+      "nextRewrite" : {
+        "version" : "5.0.x",
+        "project" : null
+      },
+      "requirements" : {
+        "supportedGenerations" : { },
+        "excludedArtifacts" : [ ]
+      }
+    },
+    "5.0.x" : {
+      "recipes" : [ ],
+      "nextRewrite" : {
+        "version" : "5.1.x",
+        "project" : null
+      },
+      "requirements" : {
+        "supportedGenerations" : { },
+        "excludedArtifacts" : [ ]
+      }
+    },
+    "5.1.x" : {
+      "recipes" : [ ],
+      "nextRewrite" : null,
+      "requirements" : {
+        "supportedGenerations" : { },
+        "excludedArtifacts" : [ ]
+      }
+    }
+  }
+}

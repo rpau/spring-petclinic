@@ -17,11 +17,15 @@ package org.springframework.samples.petclinic.owner;
 
 import java.util.List;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -48,6 +52,27 @@ class OwnerRestController {
 			return ResponseEntity.ok(OwnerDto.from(owner));
 		}
 		return ResponseEntity.notFound().build();
+	}
+
+	@GetMapping("/{ownerId}/export")
+	public ResponseEntity<String> exportOwner(@PathVariable Integer ownerId) throws JsonProcessingException {
+		Owner owner = this.ownerRepository.findById(ownerId);
+		if (owner == null) {
+			return ResponseEntity.notFound().build();
+		}
+		String json = OwnerJsonMapper.toPrettyJson(OwnerDto.from(owner));
+		return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(json);
+	}
+
+	@PostMapping("/import")
+	public ResponseEntity<?> importOwner(@RequestBody String json) {
+		try {
+			OwnerDto ownerDto = OwnerJsonMapper.fromJson(json);
+			return ResponseEntity.ok(ownerDto);
+		}
+		catch (JsonProcessingException ex) {
+			return ResponseEntity.badRequest().body("Invalid JSON: " + ex.getOriginalMessage());
+		}
 	}
 
 }

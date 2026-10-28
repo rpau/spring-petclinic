@@ -69,7 +69,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @DataJpaTest(includeFilters = @ComponentScan.Filter(Service.class))
 // Ensure that if the mysql profile is active we connect to the real database:
-@AutoConfigureTestDatabase(replace = Replace.NONE)
+@AutoConfigureTestDatabase
 // @TestPropertySource("/application-postgres.properties")
 class ClinicServiceTests {
 
